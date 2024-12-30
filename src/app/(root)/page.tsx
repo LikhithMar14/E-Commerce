@@ -1,13 +1,12 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import ProductList from "@/components/shared/product/product-list";
+import sampleData
+ from "@/db/sample-data";
 
 const  Home = ()=>{
 
   return(
-    <div className="flex min-h-screen  items-center justify-center">
-        <h1 className="text-3xl;">Welcome to the ecommerce store</h1>
+    <ProductList data = {sampleData.products} title = "Newest Arrivals"/>
 
-    </div>
   );
 }
 export default Home
