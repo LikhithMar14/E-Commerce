@@ -13,3 +13,8 @@ export async function getLatestProducts() {
 }
 
 
+export async function getProductBySlug(slug:string){
+    return await  db.product.findFirst({
+        where:{slug:slug}
+    })
+}
